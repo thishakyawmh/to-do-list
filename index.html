@@ -11,14 +11,16 @@
 <body>
     <div class="container">
         <div class="todo-app">
-            <h2>To-Do List<img src="images/icon.png"></h2>
-            <div class="row">
+            <h2>To-Do List<img src="images/icon.png" alt="" aria-hidden="true"></h2>
+            <form class="row" id="task-form">
                 <div class="input-wrapper">
-                <input type="text" id="input-box" placeholder="Add your text">
+                    <label class="visually-hidden" for="input-box">New task</label>
+                    <input type="text" id="input-box" placeholder="Add your text" maxlength="240" autocomplete="off">
                 </div>
-                <button onclick="addTask()">Add</button>
-            </div>
-            <ul id="list-container">
+                <button type="submit">Add</button>
+            </form>
+            <p id="task-status" class="task-status" role="status" aria-live="polite"></p>
+            <ul id="list-container" aria-label="Your tasks">
                 <!--<li class="checked">Task 01</li>
                 <li>Task 02</li>
                 <li>Task 03</li>-->
@@ -29,7 +31,7 @@
         </div>
         
     </div>
-<script src="script.js"></script>
+<script type="module" src="script.js"></script>
 
 </body>
 </html>

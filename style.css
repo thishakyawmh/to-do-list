@@ -151,3 +151,55 @@ ul li span:hover{
         line-height: 36px;
     }
 }
+
+/* Accessible task controls */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.task-status {
+    min-height: 1.5rem;
+    margin: 0 0 0.75rem;
+    color: #37506f;
+    font-size: 0.875rem;
+}
+
+ul li .task-text {
+    display: inline-block;
+    max-width: calc(100% - 48px);
+    overflow-wrap: anywhere;
+}
+
+ul li .delete-task {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    background: transparent;
+    color: #555;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li .delete-task:hover,
+ul li .delete-task:focus-visible {
+    background: #edeef0;
+}
+
+ul li:focus-visible,
+ul li .delete-task:focus-visible {
+    outline: 2px solid #297cc9;
+    outline-offset: 2px;
+}
